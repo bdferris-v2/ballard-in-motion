@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $base-font-family;
+    //max-width: $content-width;
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+    border-bottom: 1px solid $grey-color-dark;
+}

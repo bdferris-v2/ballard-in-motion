@@ -1,0 +1,79 @@
+$header-height: 56px;
+$left-padding: 25px;
+
+header {
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
+  padding-left: $left-padding;
+  min-height: $header-height - 6;
+  line-height: $header-height - 6;
+  color: #111;
+
+  .site-title {
+      font-size: 26px;
+      font-weight: 300;
+      float: left;
+      margin-right: 2em;
+  }
+
+  nav {
+
+      a {
+	  margin-right: 1em;
+      }
+  }
+}
+
+div.content {
+    max-width: $content-width;
+    padding-left: $left-padding;
+}
+
+#map {
+  position: absolute;
+  top: $header-height;
+  bottom: 0;
+  left: $left-padding;
+  right: 350px;
+}
+
+#controls {
+    position: absolute;
+    width: 300px;
+    top: $header-height;
+    right: 25px;
+    bottom: 0;
+}
+
+ul.travel-modes li input {
+    margin-right: 2.5em;
+}
+
+.travel_mode_color_box {
+    display: inline-block;
+    margin-left: 2em;
+    width: 1em;
+    height: 1em;
+    content: "";
+    border: 1px solid $grey-color-light;
+}
+
+input#toggle_ped_bike::after {
+    @extend .travel_mode_color_box;
+    background-color: rgb(1, 87, 155);
+}
+
+input#toggle_transit::after {
+    @extend .travel_mode_color_box;
+    background-color: rgb(15, 157, 88);
+}
+
+input#toggle_freight::after {
+    @extend .travel_mode_color_box;
+    background-color: rgb(165, 39, 20);
+}
+
+input#toggle_other::after {
+    @extend .travel_mode_color_box;
+    background-color: rgb(230, 81, 0);
+}
