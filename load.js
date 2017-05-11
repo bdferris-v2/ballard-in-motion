@@ -14,7 +14,11 @@ function load() {
     new google.maps.LatLng(47.659318, -122.396622),
     new google.maps.LatLng(47.673075, -122.364178)));
 
-  var m = new InfraStructuredMap(map);
+  var infraOptions = {
+    map: map,
+    baseHref: 'resources.html'
+  };
+  var m = new InfraStructuredMap(infraOptions);
 
   m.addModePropertyToggle(elById('toggle_ped_bike'), 'Pedestrian / Bike');
   m.addModePropertyToggle(elById('toggle_transit'), 'Transit');
